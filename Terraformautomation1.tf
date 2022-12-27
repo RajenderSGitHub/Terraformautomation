@@ -6,6 +6,11 @@ terraform {
       #version = "~> 3.21" # Optional but recommended in production
     }
   }
+  backend "s3" {
+    bucket = "my-terraform-state"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 # Provider Block
